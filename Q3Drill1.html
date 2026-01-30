@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			body {
+				background-color: black;
+			}
+
+		</style>
+		<title>Q3 Drill 1</title>
+	</head>
+
+	<body>
+		<div class="container bg-secondary m-2 px-1 border rounded">
+			
+			<h1 class="display-4"><b>Addition Calculator</b></h1>
+			<p id="para1">Put ints <sup>(or floats)</sup> into the blanks, and then press the "=" button to add them! </p>
+			
+			<input class="bg-dark text-light border rounded" id="in1" type="number" value="3" />
+			<h2 class="Plus"><b><i>Plus</i></b></h2>
+			<input class="bg-dark text-light border rounded" id="in2" type="number" value="3" />
+			
+			<script>
+				function calculate() { //Defines function to be ran later
+					let a = document.getElementById("in1").value; // Gets in1 and converts into float
+					a = parseFloat(a)
+					let b = document.getElementById("in2").value; // Ditto a, but in2
+					b = parseFloat(b);
+					let prod = a + b; /*Adds a + b, then sets result to prod
+										abritrary indented comment*/
+					document.getElementById('display').innerHTML=' <h2>' + prod + '</h2>' // sets "display" to prod
+				}
+
+			</script>
+
+			<button type="button" onclick="calculate();">=</button>
+
+			<br><br><br>
+				<div class="p-1">
+					<p class="bg-dark text-light px-1 border rounded" id="display"></p>
+				</div>
+			<br>
+
+		</div>
+	</body>
+</html>
